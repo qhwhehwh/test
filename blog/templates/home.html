@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+<body>
+ <div class="container">
+{% for blog in blogs.all %} 
+<div class="card">
+    <div class="card-header">
+     {{blog.title}}
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>{{blog.summary}}</p>
+        <div style="text-align:right">
+        <a class="btn btn-secondary" href="{%url 'detail' blog.id%}" role="button">more</a></div>
+        <footer class="blockquote-footer">{{blog.pub_date}}에 작성됨</footer>
+      </blockquote>
+    </div>
+  </div>
+
+
+      <br>
+{% endfor %}
+</div>
+
+
+
+</body>
+{% endblock %}

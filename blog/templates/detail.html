@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+
+<br>
+
+
+</div>
+<div class="container">
+
+<div class="card">
+    <div class="card-header">
+    <h2>{{blog.title}} </h2>
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p><p>{{blog.body}}</p></p>
+        
+        <footer class="blockquote-footer"><p>{{blog.pub_date}}</p></footer>
+      </blockquote>
+    </div>
+  </div>
+</div>
+{% endblock%}
